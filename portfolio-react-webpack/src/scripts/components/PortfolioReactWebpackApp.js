@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react/addons');
+var Imagebox = require('./Imagebox');
 var ReactTransitionGroup = React.addons.TransitionGroup;
 
 // Export React so the devtools can find it
@@ -8,7 +9,7 @@ var ReactTransitionGroup = React.addons.TransitionGroup;
 
 // CSS
 require('../../styles/normalize.css');
-require('../../styles/main.css');
+require('../../styles/main.less');
 
 var imageURL = require('../../images/yeoman.png');
 
@@ -17,7 +18,7 @@ var PortfolioReactWebpackApp = React.createClass({
     return (
       <div className='main'>
         <ReactTransitionGroup transitionName="fade">
-          <img src={imageURL} />
+          <Imagebox imageURL={imageURL}/>
         </ReactTransitionGroup>
       </div>
     );
