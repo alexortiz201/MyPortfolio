@@ -18,6 +18,9 @@ module.exports = function (config) {
           test: /\.css$/,
           loader: 'style!css'
         }, {
+          test: /\.less/,
+          loader: 'style!css!less'
+        }, {
           test: /\.gif/,
           loader: 'url-loader?limit=10000&mimetype=image/gif'
         }, {

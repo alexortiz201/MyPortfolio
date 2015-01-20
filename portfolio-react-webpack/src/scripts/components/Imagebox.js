@@ -9,13 +9,9 @@ require('../../styles/Imagebox.less');
 var Imagebox = React.createClass({
   render: function () {
     return (
-        <div>
-          <img src={this.props.imageURL} />
-        </div>
+      	<img src={this.props.imageURL} key={this.props.imageURL} />
       );
   }
 });
 
 module.exports = Imagebox;
-
-

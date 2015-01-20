@@ -2,7 +2,7 @@
 
 var React = require('react/addons');
 var Imagebox = require('./Imagebox');
-var ReactTransitionGroup = React.addons.TransitionGroup;
+var ReactTransitionGroup = React.addons.CSSTransitionGroup;
 
 // Export React so the devtools can find it
 (window !== window.top ? window.top : window).React = React;
@@ -17,8 +17,7 @@ var PortfolioReactWebpackApp = React.createClass({
   render: function() {
     return (
       <div className='main'>
-        <ReactTransitionGroup transitionName="fade">
-          <Imagebox imageURL={imageURL}/>
+        <ReactTransitionGroup transitionName='fade' component='img' src={imageURL} key={imageURL}>
         </ReactTransitionGroup>
       </div>
     );
